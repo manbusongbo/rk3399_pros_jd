@@ -1,0 +1,57 @@
+&dsi {
+	status = "okay";
+	rockchip,lane-rate = <500>;
+	panel@0 {
+		compatible ="simple-panel-dsi";
+		reg = <0>;
+		backlight = <&pwm_bl>;
+		power-supply = <&vcc_lcd>;
+		//enable-gpios = <&gpio1 13 GPIO_ACTIVE_HIGH>;
+		reset-gpios = <&gpio4 30 GPIO_ACTIVE_LOW>;
+		dsi,flags = <(MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_BURST |
+				MIPI_DSI_MODE_VIDEO_SYNC_PULSE)>;
+		dsi,format = <MIPI_DSI_FMT_RGB888>;
+		dsi,lanes = <4>;
+		reset-delay-ms = <20>;
+		init-delay-ms = <20>;
+		enable-delay-ms = <120>;
+		prepare-delay-ms = <120>;
+		status = "okay";
+
+		display-timings{
+			native-mode = <&timing0>;
+			timing0: timing0 {
+				clock-frequency = <60000000>;
+				hactive = <1024>;
+				vactive = <600>;
+				hback-porch = <10>;
+				hfront-porch = <200>;
+				vback-porch = <24>;
+				vfront-porch = <8>;
+				hsync-len = <20>;
+				vsync-len = <3>;
+				hsync-active = <1>;
+				vsync-active = <1>;
+				de-active = <0>;
+				pixelclk-active = <1>;
+			};
+		};
+	};
+};
+
+&display_subsystem{
+	status = "okay";
+
+};
+
+&dsi_in_vopl {
+	status = "disabled";
+};
+
+&route_dsi {
+	status = "okay";
+};
+
+&dsi_in_vopb {
+		status = "okay";
+};

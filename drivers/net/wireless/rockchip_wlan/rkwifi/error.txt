@@ -1,0 +1,164 @@
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:760:33: warning: ‘struct cfg80211_external_auth_params’ declared inside parameter list will not be visible outside of this definition or declaration
+  struct net_device *dev, struct cfg80211_external_auth_params *ext_auth);
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:11914:2: error: unknown field ‘external_auth’ specified in initializer
+  .external_auth = wl_cfg80211_external_auth,
+  ^
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:11914:19: warning: initialization from incompatible pointer type [-Wincompatible-pointer-types]
+  .external_auth = wl_cfg80211_external_auth,
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:11914:19: note: (near initialization for ‘wl_cfg80211_ops.tdls_mgmt’)
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c: In function ‘wl_notify_start_auth’:
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25724:39: error: storage size of ‘ext_auth_param’ isn’t known
+  struct cfg80211_external_auth_params ext_auth_param;
+                                       ^~~~~~~~~~~~~~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25743:26: error: ‘NL80211_EXTERNAL_AUTH_START’ undeclared (first use in this function)
+  ext_auth_param.action = NL80211_EXTERNAL_AUTH_START;
+                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25743:26: note: each undeclared identifier is reported only once for each function it appears in
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25766:11: error: ‘struct wireless_dev’ has no member named ‘conn_owner_nlportid’; did you mean ‘owner_nlportid’?
+   if (wdev->conn_owner_nlportid) {
+           ^~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25724:39: warning: unused variable ‘ext_auth_param’ [-Wunused-variable]
+  struct cfg80211_external_auth_params ext_auth_param;
+                                       ^~~~~~~~~~~~~~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c: At top level:
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25895:34: warning: ‘struct cfg80211_external_auth_params’ declared inside parameter list will not be visible outside of this definition or declaration
+  struct net_device *ndev, struct cfg80211_external_auth_params *ext_auth_param)
+                                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25894:1: error: conflicting types for ‘wl_cfg80211_external_auth’
+ wl_cfg80211_external_auth(struct wiphy *wiphy,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:759:1: note: previous declaration of ‘wl_cfg80211_external_auth’ was here
+ wl_cfg80211_external_auth(struct wiphy *wiphy,
+ ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:32:0:
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c: In function ‘wl_cfg80211_external_auth’:
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:25904:34: error: dereferencing pointer to incomplete type ‘struct cfg80211_external_auth_params’
+   ETHER_ISNULLADDR(ext_auth_param->bssid)) {
+                                  ^
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/include/ethernet.h:245:47: note: in definition of macro ‘ETHER_ISNULLADDR’
+ #define ETHER_ISNULLADDR(ea) ether_isnulladdr(ea)
+                                               ^~
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c: At top level:
+drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_cfg80211.c:759:1: warning: ‘wl_cfg80211_external_auth’ used but never defined
+ wl_cfg80211_external_auth(struct wiphy *wiphy,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+drivers/built-in.o: In function `dhd_dpc':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4937: undefined reference to `dhd_bus_dpc'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4937:(.text+0x223b50): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_bus_dpc'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4944: undefined reference to `dhd_bus_stop'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4944:(.text+0x223ba0): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_bus_stop'
+drivers/built-in.o: In function `dhd_watchdog':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4699: undefined reference to `dhd_bus_watchdog'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4699:(.text+0x223c48): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_bus_watchdog'
+drivers/built-in.o: In function `dhd_module_cleanup':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14779: undefined reference to `dhd_bus_unregister'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14779:(.text+0x223d0c): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_bus_unregister'
+drivers/built-in.o: In function `dhd_process_cid_mac':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:2190: undefined reference to `dhd_bus_chip_id'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:2190:(.text+0x223f44): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_bus_chip_id'
+drivers/built-in.o: In function `dhd_bus_detach':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14148: undefined reference to `dhd_prot_stop'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14148:(.text+0x224bbc): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_prot_stop'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14160: undefined reference to `dhd_bus_stop'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14160:(.text+0x224bc8): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_bus_stop'
+drivers/built-in.o: In function `dhd_dev_init_ioctl':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:16002: undefined reference to `dhd_sync_with_dongle'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:16002:(.text+0x225830): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_sync_with_dongle'
+drivers/built-in.o: In function `dhd_get_stats':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4600: undefined reference to `dhd_prot_dstats'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4600:(.text+0x22845c): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_prot_dstats'
+drivers/built-in.o: In function `dhd_watchdog_thread':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4645: undefined reference to `dhd_bus_watchdog'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4645:(.text+0x22aea4): relocation truncated to fit: R_AARCH64_CALL26 against undefined symbol `dhd_bus_watchdog'
+drivers/built-in.o: In function `dhd_detach':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14249: undefined reference to `dhd_prot_detach'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:14249:(.text+0x231514): additional relocation overflows omitted from the output
+drivers/built-in.o: In function `dhd_attach':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:8986: undefined reference to `dhd_bus_chip'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:8986: undefined reference to `dhd_bus_chiprev'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:9099: undefined reference to `dhd_prot_attach'
+drivers/built-in.o: In function `dhd_dpc_thread':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4810: undefined reference to `dhd_bus_dpc'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:4828: undefined reference to `dhd_bus_stop'
+drivers/built-in.o: In function `dhd_bus_start':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:9994: undefined reference to `dhd_bus_init'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:9967: undefined reference to `dhd_bus_set_signature_path'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:9968: undefined reference to `dhd_bus_download_firmware'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:10058: undefined reference to `dhd_prot_init'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:10088: undefined reference to `dhd_sync_with_dongle'
+drivers/built-in.o: In function `dhd_os_get_img_fwreq':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:15394: undefined reference to `dhd_bus_to_dev'
+drivers/built-in.o: In function `dhd_deferred_socram_dump':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:23933: undefined reference to `dhd_socram_dump'
+drivers/built-in.o: In function `dhd_stop':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:6527: undefined reference to `dhd_prot_stop'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:6527: undefined reference to `dhd_prot_stop'
+drivers/built-in.o: In function `dhd_get_wakecount':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux.c:21886: undefined reference to `dhd_bus_get_wakecount'
+drivers/built-in.o: In function `dhd_common_socram_dump':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:1695: undefined reference to `dhd_socram_dump'
+drivers/built-in.o: In function `dhd_dump':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:1825: undefined reference to `dhd_prot_dump'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:1829: undefined reference to `dhd_bus_dump'
+drivers/built-in.o: In function `dhd_counters':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:1873: undefined reference to `dhd_bus_counters'
+drivers/built-in.o: In function `dhd_wl_ioctl':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:2218: undefined reference to `dhd_prot_ioctl'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:2249: undefined reference to `dhd_prot_get_ioctl_trans_id'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:2249: undefined reference to `dhd_prot_get_ioctl_trans_id'
+drivers/built-in.o: In function `wl_process_host_event':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:6197: undefined reference to `dhd_socram_dump'
+drivers/built-in.o: In function `dhd_doiovar':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:3142: undefined reference to `dhd_bus_clearcounts'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:3119: undefined reference to `dhd_bus_console_in'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:3896: undefined reference to `dhd_bus_dump_trap_info'
+drivers/built-in.o: In function `dhd_ioctl':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:4624: undefined reference to `dhd_prot_iovar_op'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:4636: undefined reference to `dhd_bus_iovar_op'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:4621: undefined reference to `dhd_prot_iovar_op'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_common.c:4633: undefined reference to `dhd_bus_iovar_op'
+drivers/built-in.o: In function `dhd_tcpack_check_xmit':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_ip.c:587: undefined reference to `dhd_prot_hdrlen'
+drivers/built-in.o: In function `wl_android_wifi_on':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_android.c:2260: undefined reference to `dhd_net_bus_devreset'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/wl_android.c:2300: undefined reference to `dhd_net_bus_devreset'
+drivers/built-in.o: In function `__dhd_sendpkt':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux_tx.c:418: undefined reference to `dhd_prot_hdrpush'
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux_tx.c:438: undefined reference to `dhd_bus_txdata'
+drivers/built-in.o: In function `dhd_txcomplete':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux_tx.c:1015: undefined reference to `dhd_prot_hdrpull'
+drivers/built-in.o: In function `dhd_rx_frame':
+/home/ProJD/pro_kernel/linux-4.4.138-master_4K6K/drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd/dhd_linux_rx.c:443: undefined reference to `dhd_bus_get_wakecount'
+drivers/built-in.o:(__param+0xe58): undefined reference to `dhd_dongle_ramsize'
+drivers/built-in.o:(.data+0x2d9a0): undefined reference to `dhd_wlan_mem_prealloc'
+Makefile:1022: recipe for target 'vmlinux' failed
+
