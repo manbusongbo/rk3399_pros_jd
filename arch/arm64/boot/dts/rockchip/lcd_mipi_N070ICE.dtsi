@@ -18,7 +18,7 @@
 		prepare-delay-ms = <120>;//120
 		disable-delay-ms = <40>;//120
 		unprepare-delay-ms = <40>;
-		status = "okay";        //test github diff branch code push this is jdkernel_debug branch
+		status = "okay";        //111 test github diff branch code push this is jdkernel_debug branch
                         
 		panel-init-sequence = [
 			39 00 05 FF AA 55 A5 80
